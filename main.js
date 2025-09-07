@@ -1,38 +1,38 @@
 let tasks = [];
 
-const taskForm = document.getElementById("taskForm");
-const taskList = document.getElementById("taskList");
+const Form = document.querySelector('taskForm');
+const List = document.querySelector('taskList');
 
 function saveTasks() {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function loadTasks() {
-  const savedTasks = localStorage.getItem("tasks");
+    const savedTasks = localStorage.getItem("tasks");
 
-  if (savedTasks) {
-    tasks = JSON.parse(savedTasks);
-    renderTasks();
-  }
+    if (savedTasks) {
+        tasks = JSON.parse(savedTasks);
+        renderTasks();  
+    }
 }
 
-window.addEventListener("load", loadTasks);
+window.addEventListener('load', loadTasks);
 
 function renderTasks() {
   taskList.innerHTML = "";
 
   tasks.forEach((task) => {
     const taskElement = document.createElement("div");
-    taskElement.classList.add("task");
+    taskElement.classList.add("zadanie");
     if (task.completed) {
-      taskElement.classList.add("completed");
+      taskElement.classList.add("zaliczone");
     }
 
     taskElement.innerHTML = `
-      <p><strong>Name:</strong> ${task.name}</p>
-      <p><strong>Description:</strong> ${task.description}</p>
-      <p><strong>Priority:</strong> ${task.priority}</p>
-      <p><strong>Due Date:</strong> ${task.dueDate}</p>
+      <p><strong>Przedmiot:</strong> ${task.name}</p>
+      <p><strong>Zakres:</strong> ${task.description}</p>
+      <p><strong>Rodzaj:</strong> ${task.priority}</p>
+      <p><strong>Do kiedy:</strong> ${task.dueDate}</p>
       <button class="completeButton" data-task-id="${task.id}">${
       task.completed ? "Mark Incomplete" : "Mark Complete"
     }</button>
@@ -55,9 +55,9 @@ function addTask(e) {
   e.preventDefault();
 
   const taskNameInput = document.getElementById("taskName");
-  const taskDescriptionInput = document.getElementById("taskDescription");
-  const taskPriorityInput = document.getElementById("taskPriority");
-  const taskDueDateInput = document.getElementById("taskDueDate");
+  const taskDescriptionInput = document.getElementById("taskDesc");
+  const taskPriorityInput = document.getElementById("taskPrio");
+  const taskDueDateInput = document.getElementById("taskDate");
 
   const newTask = {
     id: Date.now(),
@@ -98,3 +98,4 @@ function deleteTask(e) {
 }
 
 taskForm.addEventListener("submit", addTask);
+
