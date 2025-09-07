@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>To-do list but better</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Task Manager</h1>
-      <form id="taskForm">
-        <input type="text" id="taskName" placeholder="Task Name" required />
-        <input
-          type="text"
-          id="taskDescription"
-          placeholder="Task Description"
-          required
-        />
-        <select id="taskPriority">
-          <option value="low">Low Priority</option>
-          <option value="medium">Medium Priority</option>
-          <option value="high">High Priority</option>
-        </select>
-        <input type="date" id="taskDueDate" required />
-        <button type="submit">Add Task</button>
-      </form>
-      <div id="taskList"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sprawdziany/Kartkówki/Zadania</title>
+</head>
+<body>
+    <div class="content">
+        <h1>do zrobienia</h1>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Przedmiot" required />
+            <input type="text" id="taskDesc" placeholder="Zakres" required />
+            <select id="taskPrio">
+                <option value="Sprawdzian">Sprawdzian</option>
+                <option value="Karttkówka">Kartkówka</option>
+                <option value="Zadanie">Zadanie</option>
+            </select>
+            <input type="date" id="taskDate" required />
+            <button type="submit">Dodaj zadanie</button>
+        </form>
+
+        <p>₊✩‧₊˚౨ৎ˚₊✩‧₊₊✩‧₊˚౨ৎ˚₊✩‧₊₊✩‧₊˚౨ৎ˚₊✩‧₊₊✩‧₊˚౨ৎ˚₊✩‧₊</p>
+
+        <div id="taskList"></div>
     </div>
-  </body>
+
+    
+</body>
 </html>
