@@ -1,32 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik&display=swap");
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-  background-color: #1e2019;
-  font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffe5ec;
 }
 
-.container {
+.content {
   max-width: 600px;
   margin: 20px auto;
-  background-color: #393e41;
+  background-color: #fb6f92;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  color: white;
-  font-family: "Rubik", sans-serif;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.486);
+  border-radius: 5%;
 }
 
 input[type="text"],
@@ -38,32 +26,56 @@ input[type="date"] {
   border: 1px solid #ccc;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
 button {
-  padding: 8px 16px;
-  font-size: 16px;
-  background-color: #e2c044;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition-duration: 0.4s;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #ffc2d1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5%;
+    width: 50%;
+    align-self: center;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 2px 2px 4px #000000
+
 }
 
 button:hover {
-  background-color: #907b30;
+    background-color: #ff8aa2;
+    color: white;
 }
 
-.task {
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+.zadanie {
+    background-color: #ff8fab;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    
+    
 }
 
-.task p {
-  margin: 0;
+.zadanie p {
+    margin: 0;
 }
 
-.task.completed {
+.zadanie.zaliczone {
   background-color: #9f8989;
 }
